@@ -3,7 +3,8 @@ export default function Node({ node }) {
     <div
       className={`node ${node.type || ""}`}
       style={{
-        transform: `translate(${node.x}px, ${node.y}px)`
+        left: `${node.x}px`,
+        top: `${node.y}px`
       }}
     >
       {node.label}

@@ -7,7 +7,7 @@ export default function Graph() {
 
   return (
     <div className="graph">
-      <svg className="edges">
+      <svg className="edges" viewBox="-600 -100 1200 1700" preserveAspectRatio="xMidYMid meet">
         {edges.map(([a, b], i) => (
           <Edge key={i} from={getNode(a)} to={getNode(b)} />
         ))}
