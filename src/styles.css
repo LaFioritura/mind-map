@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle at center, #0a0f1f, #02050d);
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.viewport {
+  width: 100vw;
+  height: 100vh;
+  cursor: grab;
+}
+
+.canvas {
+  position: relative;
+  transform-origin: center;
+}
+
+.node {
+  position: absolute;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.node.root { border-color: #6dd3ff; }
+.node.core { border-color: #9d8cff; }
+.node.identity { border-color: #ffffff; }
+.node.danger { border-color: #ff6b6b; }
+.node.safe { border-color: #4ade80; }
+.node.rebuild { border-color: #facc15; }
+
+.edges {
+  position: absolute;
+  width: 2000px;
+  height: 2000px;
+  overflow: visible;
+}
+
+.edge {
+  fill: none;
+  stroke: rgba(150, 180, 255, 0.4);
+  stroke-width: 2;
+}
